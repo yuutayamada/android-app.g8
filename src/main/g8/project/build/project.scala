@@ -1,7 +1,7 @@
 import sbt._
 
 trait Defaults {
-  def androidPlatformName = "android-$platform$"
+  def androidPlatformName = "android-$api_level$"
 }
 class Parent(info: ProjectInfo) extends ParentProject(info) {
   override def shouldCheckOutputDirectories = false
