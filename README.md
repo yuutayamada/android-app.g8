@@ -18,7 +18,7 @@ All done? Now fire up your favorite shell and enter
 
 Your android sbt project contains 2 subprojects:
 
-    * MainProject
-        * generated AndroidManifest.xml
-        * MainActivity.scala (the "hello world" activity)
-    * TestProject
+* MainProject
+    * generated AndroidManifest.xml
+    * MainActivity.scala (the "hello world" activity)
+* TestProject
