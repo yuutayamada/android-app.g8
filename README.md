@@ -9,7 +9,7 @@ To use this template, g8 needs to be installed first. Read g8's [readme](http://
 
 All done? Now fire up your favorite shell and enter
 
-    g8 n8han/android-app
+    g8 philcali/android-app
     cd <name-of-app>
     sbt update
     sbt compile
