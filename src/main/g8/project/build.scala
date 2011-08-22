@@ -11,7 +11,7 @@ object General {
     platformName in Android := "android-$api_level$"
   )
 
-  lazy val fullAndroidSettings = 
+  lazy val fullAndroidSettings =
     General.settings ++
     AndroidProject.androidSettings ++
     TypedResources.settings ++
@@ -23,9 +23,9 @@ object General {
 
 object AndroidBuild extends Build {
   lazy val main = Project (
-    file("."), 
+    file("."),
     "$name$",
-    settings = General.fullAndroidSettings 
+    settings = General.fullAndroidSettings
   )
 
   lazy val tests = Project (
