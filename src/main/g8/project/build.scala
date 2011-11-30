@@ -31,6 +31,8 @@ object AndroidBuild extends Build {
   lazy val tests = Project (
     "tests",
     file("tests"),
-    settings = General.settings ++ AndroidTest.androidSettings
+    settings = General.settings ++ AndroidTest.androidSettings ++ Seq (
+      name := "$name$Tests"
+    )
   ) dependsOn main
 }
