@@ -1,8 +1,8 @@
 import $package$
 import org.scalatest.matchers.ShouldMatchers
-import org.scalatest.Spec
+import org.scalatest.FunSpec
 
-class Specs extends Spec with ShouldMatchers {
+class Specs extends FunSpec with ShouldMatchers {
   describe("a spec") {
     it("should do something") {
     }
