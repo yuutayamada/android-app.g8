@@ -9,6 +9,7 @@ object General {
     version := "0.1",
     scalaVersion := "$scala_version$",
     platformName in Android := "android-$api_level$"
+    useProguard in Android := $useProguard$
   )
 
   lazy val fullAndroidSettings =
