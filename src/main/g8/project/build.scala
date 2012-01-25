@@ -15,7 +15,6 @@ object General {
     General.settings ++
     AndroidProject.androidSettings ++
     TypedResources.settings ++
-    AndroidTest.settings ++
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "change-me",
       libraryDependencies += "org.scalatest" %% "scalatest" % "1.6.1" % "test"
@@ -32,7 +31,7 @@ object AndroidBuild extends Build {
   lazy val tests = Project (
     "tests",
     file("tests"),
-    settings = General.settings ++ AndroidTest.androidSettings ++ Seq (
+    settings = General.settings ++ AndroidTest.settings ++ Seq (
       name := "$name$Tests"
     )
   ) dependsOn main
