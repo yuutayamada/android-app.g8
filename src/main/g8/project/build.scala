@@ -7,6 +7,7 @@ object General {
   val settings = Defaults.defaultSettings ++ Seq (
     name := "$name$",
     version := "0.1",
+    versionCode := 0,
     scalaVersion := "$scala_version$",
     platformName in Android := "android-$api_level$"
   )
@@ -20,6 +21,7 @@ object General {
     AndroidProject.androidSettings ++
     TypedResources.settings ++
     proguardSettings ++
+    AndroidManifestGenerator.settings ++
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "change-me",
       libraryDependencies += "org.scalatest" %% "scalatest" % "1.7.RC1" % "test"
