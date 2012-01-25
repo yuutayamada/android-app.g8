@@ -9,6 +9,9 @@ object General {
     version := "0.1",
     scalaVersion := "$scala_version$",
     platformName in Android := "android-$api_level$"
+  )
+
+  val proguardSettings = Seq (
     useProguard in Android := $useProguard$
   )
 
@@ -16,6 +19,7 @@ object General {
     General.settings ++
     AndroidProject.androidSettings ++
     TypedResources.settings ++
+    proguardSettings ++
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "change-me",
       libraryDependencies += "org.scalatest" %% "scalatest" % "1.7.RC1" % "test"
@@ -32,7 +36,9 @@ object AndroidBuild extends Build {
   lazy val tests = Project (
     "tests",
     file("tests"),
-    settings = General.settings ++ AndroidTest.settings ++ Seq (
+    settings = General.settings ++
+               AndroidTest.settings ++
+               General.proguardSettings ++ Seq (
       name := "$name$Tests"
     )
   ) dependsOn main
