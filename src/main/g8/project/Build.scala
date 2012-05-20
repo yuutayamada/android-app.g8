@@ -39,7 +39,7 @@ object AndroidBuild extends Build {
     "tests",
     file("tests"),
     settings = General.settings ++
-               AndroidTest.settings ++
+               AndroidTest.androidSettings ++
                General.proguardSettings ++ Seq (
       name := "$name$Tests"
     )
